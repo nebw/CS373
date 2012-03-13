@@ -1,3 +1,5 @@
+#visualization code by berthy424 and Marcello79
+
 from Tkinter import *
 from impl import *
 
