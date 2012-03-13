@@ -115,7 +115,11 @@ class robot:
             self.y += d * sin(self.orientation)
             self.orientation = (self.orientation + beta) % (2*pi) 
             
-        return self
+        result = robot(self.length)
+        result.set(x, y, orientation)
+        result.set_noise(self.bearing_noise, self.steering_noise, self.distance_noise)
+            
+        return result
                       
     ############## ONLY ADD/MODIFY CODE ABOVE HERE ####################
         
